@@ -1,0 +1,270 @@
+:root{
+    --black: rgb(11, 13, 23);
+    --ligth_pink: rgb(208,214,249);
+    --white:rgb(255, 255, 255);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas:
+    "nav nav"
+    "main section";
+}
+
+
+        /*-----NAV-----*/
+
+nav{
+    grid-area: nav;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px  50px 0px 50px;
+}
+
+nav svg{
+    height:4vw;
+    min-height:4vw;
+    width: 4vw;
+    min-width: 4vw;
+}
+
+nav span{
+    height: 4px;
+    width: 35vw;
+    background: rgba(255, 255, 255, 0.116);
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    align-items: end;
+    justify-content: space-around;
+    width: 40vw;
+    height: 65px;
+    min-width: 400px;
+    list-style: none;
+
+    font-size:clamp(15px, 1vw, 18px);
+    letter-spacing: .15vw;
+    gap:1vw;
+
+    padding:0px 5vw;
+    background:rgba(255, 255, 255, 0.051);
+    backdrop-filter: blur(10px);
+}
+
+nav ul li{
+    padding-bottom:20px;
+    transition: ease .3s;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+#navSelected{
+    border-bottom: solid rgb(255, 255, 255) 3px;
+}
+
+nav ul li:hover{
+    border-bottom: solid rgba(255, 255, 255, 0.116) 3px;
+}
+
+        /*END NAV*/
+
+
+        /*-----MAIN-----*/
+main{
+    grid-area: main;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top:3vw;
+}
+
+main p{
+    display:flex;
+    transform: translateX(-4vw);
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: .3vw;
+    font-size:1.7vw;
+    font-weight: 400;
+    gap:1.5vw;
+    animation:colorTransparent ease 2s;
+}
+
+main p number{
+    color:var(--ligth_pink);
+    font-weight: 600;
+    animation:colorTransparent ease 3s;
+}
+
+main destiny{
+    margin-top: 3vw;
+    margin-left: 10vw;
+    height: 28vw;
+    width: 28vw;
+    background-size:cover;
+    background-repeat:no-repeat;
+    animation:fromLeft ease 2s;
+}
+
+        /*END MAIN*/
+
+        /*-----SECTION-----*/
+section{
+    grid-area: section;
+    display:flex;
+    flex-direction: column;
+    gap:1vw;
+    margin-top:3vw
+}
+
+section ul{
+    margin-top:60px;
+    list-style: none;
+    display:flex;
+    justify-content: start;
+    gap:3vw;
+}
+
+section ul li{
+    color:var(--ligth_pink);
+    cursor: pointer;
+    transition: ease .3s;
+    animation:fromTop ease 1s;
+}
+
+section ul li:hover{
+    border-bottom:solid var(--ligth_pink) 2px;
+}
+
+section h1{
+    color:var(--white);
+    font-family: 'Bellefair', serif;
+    font-size: 6vw;
+    font-weight: 400;
+    animation: fromLeft ease 2s;
+}
+
+section descripition{
+    width: 30vw;
+    color:var(--ligth_pink);
+    animation: fromRight ease 1.4s;
+}
+
+section .barrinha_decorativa{
+    background-color:rgba(255, 255, 255, 0.116);
+    height: 4px;
+    width: 40vw;
+    animation:fromRight ease 1.4s;
+}
+
+section .distancia{
+    display: flex;
+    justify-content: start;
+    gap:7vw;
+    width: 30vw;
+    animation:fromBottom ease 2s;
+}
+
+section .distancia p{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size:clamp(10px, 1.5vw, 15px);
+    font-weight: 400;
+
+    color:var(--ligth_pink);
+}
+
+section .distancia h3{
+    font-size:clamp(15px, 2vw, 30px);
+    font-weight: 200;
+}
+        /*END SECTION*/
+
+
+        /*ANIMATIONS*/
+
+
+
+@keyframes fromLeft {
+    from{
+        transform: translateX(-100px);
+        color:transparent
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fromRight {
+    from{
+        transform: translateX(100px);
+        color:transparent
+    }
+
+    to{
+        transform: translateX();
+    }
+}
+
+@keyframes fromTop {
+    from{
+        transform: translateY(-100px);
+        color:transparent
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        transform: translateY(100px);
+        color:transparent
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes backgroundTransparent {
+    from{
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    to{
+    }
+}
+
+@keyframes colorTransparent {
+    from{
+        color: rgba(255, 255, 255, 0);
+    }
+
+    to{
+    }
+}
+
+        /*END ANIMATIONS*/
+

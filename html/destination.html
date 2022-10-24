@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/destination.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Bellefair&display=swap" rel="stylesheet">
+ 
+<title>Document</title>
+</head>
+<body>
+    <nav>
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/></svg>    
+        <span class="barrinha_decorativa"></span>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li id="navSelected"><a href="destination.html">DESTINATION</a></li>
+            <li><a href="crew.html">CREW</a></li>
+            <li><a href="technology.html">TECHNOLOGY</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>
+            <number>01</number>
+            PICK YOUR DESTINATION
+        </p>
+        <destiny id="image_destiny"></destiny>
+    </main>
+    <section>
+        <ul>
+            <li id="moon"  onclick="select_destiny(moon)" >MOON</li>
+            <li id="mars" onclick="select_destiny(mars)">MARS</li>
+            <li id="europa" onclick="select_destiny(europa)">EUROPA</li>
+            <li id="titan"onclick="select_destiny(titan)">TITAN</li>
+        </ul>
+        <h1 id="name_destiny_selected">MOON</h1>
+        <descripition id="descripition_destiny_selected">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur perferendis asperiores illo vel, ipsa recusandae! Accusantium explicabo non aspernatur alias. Atque at nemo eveniet debitis aliquam incidunt eaque commodi iste.</descripition>
+        <span class="barrinha_decorativa"></span>
+        <content class="distancia">
+            <div>
+                <p>AVG. DISTANCE</p>
+                <h3 id="distance_travelim">999 MIL. KM</h3>
+            </div>
+            <div>
+                <p>EST.TRAVEL TIME</p>
+                <h3 id="time_travelim">9 MONTHS</h3>
+            </div>
+        </content>
+    </section>
+</body>
+ <script src="../scrips/destination.js"></script>
+</html>

@@ -1,0 +1,254 @@
+:root{
+    --black: rgb(11, 13, 23);
+    --ligth_pink: rgb(208,214,249);
+    --white:rgb(255, 255, 255);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+    font-family:'Barlow Condensed', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas:
+    "nav nav"
+    "main explore";
+}
+
+
+        /*-----NAV-----*/
+
+nav{
+    grid-area: nav;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px  50px 0px 50px;
+}
+
+nav svg{
+    height:4vw;
+    min-height:4vw;
+    width: 4vw;
+    min-width: 4vw;
+}
+
+nav span{
+    height: 4px;
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.116);
+    animation:backgroundTransparent ease 2s;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    align-items: end;
+    justify-content: space-around;
+    width: 40vw;
+    height: 65px;
+    min-width: 400px;
+    list-style: none;
+
+    font-size:clamp(15px, 1vw, 18px);
+    letter-spacing: .15vw;
+    gap:1vw;
+
+    padding:0px 5vw;
+    background:rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(10px);
+    animation:backgroundTransparent ease 2s;
+}
+
+nav ul li{
+    padding-bottom:20px;
+    transition: ease .3s;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+#navSelected{
+    border-bottom: solid rgb(255, 255, 255) 3px;
+}
+
+nav ul li:hover{
+    border-bottom: solid rgba(255, 255, 255, 0.116) 3px;
+}
+
+        /*END NAV*/
+
+
+        /*-----MAIN-----*/
+
+main{
+    grid-area: main;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 150px;
+    gap: 25px;
+}
+
+main h1{
+    color:var(--white);
+    font-family: 'Bellefair', serif;
+    font-size: 8vw;
+    font-weight: 400;
+    animation:fromLeft ease 1.3s;
+
+}
+
+main p{
+    color:var(--ligth_pink);
+    width: 23vw;
+    font-size:clamp( 15px,1.3vw, 20px);
+    letter-spacing: 2px;
+    animation:fromLeft ease 2s;
+}
+
+        /*END MAIN*/
+
+
+        /*-----EXPLORE-----*/
+explore{
+    grid-area: explore;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:150px;
+    margin-top:155px;
+    animation:fromBottom ease 2s;
+}
+
+explore a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 15vw;
+    width: 15vw;
+    border-radius:50%;
+    border:none;
+    z-index:2;
+    
+
+    font-family: 'Bellefair';
+    text-decoration: none;
+    font-size:2vw;
+    font-weight: 400;
+    letter-spacing: .2vw;
+    color:black;
+    background:rgba(255, 255, 255, 0.229);
+    animation:colorTransparent ease 4s;
+}
+
+explore::before{
+
+    content:"";
+    position: absolute;
+    z-index:1;
+    background-color:white;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    animation:backgroundTransparent ease 2s;
+    
+}
+
+explore a:hover{
+    height: 30vw;
+    width: 30vw;
+    transition: .5s;
+}
+
+
+        /*END EXPLORE*/
+
+
+        /*ANIMATIONS*/
+
+
+
+        @keyframes fromLeft {
+            from{
+                transform: translateX(-100px);
+                color:transparent;
+                
+            }
+        
+            to{
+                transform: translateX(0px);
+            }
+        }
+        
+        @keyframes fromRight {
+            from{
+                transform: translateX(100px);
+                color:transparent
+            }
+        
+            to{
+                transform: translateX();
+            }
+        }
+        
+        @keyframes fromTop {
+            from{
+                transform: translateY(-100px);
+                color:transparent
+            }
+        
+            to{
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes fromBottom {
+            from{
+                transform: translateY(100px);
+                color:transparent;
+            }
+        
+            to{
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes backgroundTransparent {
+            from{
+                background-color: rgba(255, 255, 255, 0);
+            }
+        
+            to{
+            }
+        }
+      
+        @keyframes colorTransparent {
+            from{
+                color: rgba(255, 255, 255, 0);
+            }
+        
+            to{
+            }
+        }
+
+
+        
+                /*END ANIMATIONS*/
+        
+        
