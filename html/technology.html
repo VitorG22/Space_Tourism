@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="../css/technology.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Bellefair&display=swap" rel="stylesheet">
+ <title>Document</title>
 </head>
 <body>
-    
+    <nav>
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/></svg>    
+        <span class="barrinha_decorativa"></span>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="destination.html">DESTINATION</a></li>
+            <li><a href="crew.html">CREW</a></li>
+            <li id="navSelected"><a href="technology.html">TECHNOLOGY</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h4>
+            <number>03</number>
+            space launch 101
+        </h4>
+        <div>
+            <ul>
+                <li id="button1" onclick="technologySelect(button1)">1</li>
+                <li id="button2" onclick="technologySelect(button2)">2</li>
+                <li id="button3" onclick="technologySelect(button3)">3</li>
+            </ul>
+            <info>
+                <h3>THE TERMINOLOGY...</h3>
+                <h1 id="technoName"></h1>
+                <p id="technoDescripition"></p>
+            </info>
+        </div>
+    </main>
+    <section>
+        <img id="technologyImage" src="../assets/technology/image-spaceport-portrait.jpg" alt="">
+    </section>
 </body>
+<script src="../scrips/technology.js"></script>
 </html>

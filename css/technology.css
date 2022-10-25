@@ -1,0 +1,215 @@
+:root{
+    --black: rgb(11, 13, 23);
+    --ligth_pink: rgb(208,214,249);
+    --white:rgb(255, 255, 255);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+    font-family:'Barlow Condensed', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas:
+    "nav nav"
+    "main section";
+}
+
+
+        /*-----NAV-----*/
+
+nav{
+    grid-area: nav;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px  50px 0px 50px;
+}
+
+nav svg{
+    height:4vw;
+    min-height:4vw;
+    width: 4vw;
+    min-width: 4vw;
+}
+
+nav span{
+    height: 4px;
+    width: 35vw;
+    background-color: rgba(255, 255, 255, 0.116);
+    animation:backgroundTransparent ease 2s;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    align-items: end;
+    justify-content: space-around;
+    width: 40vw;
+    height: 65px;
+    min-width: 400px;
+    list-style: none;
+
+    font-size:clamp(15px, 1vw, 18px);
+    letter-spacing: .15vw;
+    gap:1vw;
+
+    padding:0px 5vw;
+    background:rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(10px);
+    animation:backgroundTransparent ease 2s;
+}
+
+nav ul li{
+    padding-bottom:20px;
+    transition: ease .3s;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+#navSelected{
+    border-bottom: solid rgb(255, 255, 255) 3px;
+}
+
+nav ul li:hover{
+    border-bottom: solid rgba(255, 255, 255, 0.116) 3px;
+}
+
+        /*END NAV*/
+
+        /*MAIN*/
+
+main{
+    margin-top:3vw;
+    grid-area: main;
+    display:flex;
+    flex-direction:column;
+    margin-left: 5vw;
+}
+
+main h4{
+    display:flex;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: .3vw;
+    font-size:1.7vw;
+    font-weight: 400;
+    gap:1.5vw;
+    text-transform: uppercase;
+    animation:colorTransparent ease 2s;
+}
+
+main h4 number{
+    color:var(--ligth_pink);
+    font-weight: 600;
+    animation:colorTransparent ease 3s;
+}
+
+main div{
+    display:flex;
+    flex-direction:row;
+    gap:3vw;
+    margin-top: 10vh;
+}
+
+main div ul{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap:10px;
+}
+
+main div ul li{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bellefair', serif;
+    font-size: 30px;
+    font-weight: 200;
+    border:solid rgb(71, 71, 71) 2px;
+    width: 5.2vw;
+    height:5.2vw;
+    border-radius: 50%; 
+    
+}
+
+main div ul li:hover{
+    border-color:var(--ligth_pink);
+    transition:ease .5s;
+}
+
+
+main info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main info h3{
+    text-transform: uppercase;
+    color:var(--ligth_pink);
+    font-family: 'Bellefair', serif;
+    font-size:clamp(26px, 1.5vw, 28px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+main info h1{
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size:clamp(30px, 4vw, 60px)
+}
+
+
+main info p{
+    color:var(--ligth_pink);
+    font-size:clamp(15px, 1.3vw, 25px);
+    width: 30vw;
+    max-height: 30vh;
+    overflow-y: scroll;
+    line-height: 30px;
+    letter-spacing: .1vw;
+    font-weight: 200;
+}
+
+main info p::-webkit-scrollbar{
+    width:3px;
+}
+main info p::-webkit-scrollbar-track {
+    background: rgb(71, 71, 71) ;
+}
+main info p::-webkit-scrollbar-thumb {
+    background: var(--ligth_pink); 
+  }
+
+            /*SECTION*/
+
+
+section{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section img{
+    height: auto;
+    width: 30vw;
+}
+
+
+

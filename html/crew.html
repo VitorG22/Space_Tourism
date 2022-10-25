@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/crew.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&family=Bellefair&display=swap" rel="stylesheet">
+ 
+    <title>Space Tourism</title>
+</head>
+<body>
+    <nav>
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/></svg>    
+        <span class="barrinha_decorativa"></span>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="destination.html">DESTINATION</a></li>
+            <li id="navSelected"><a href="crew.html">CREW</a></li>
+            <li><a href="technology.html">TECHNOLOGY</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>
+            <number>02</number>
+            MEET YOUR CREW
+        </p>
+
+        <info>
+            <posto id="crewPosto">flight engineer</posto>
+            <h1 id="crewName">Anousheh Ansari</h1>
+            <descripition id="crewDescripition">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quis et nulla illo, dignissimos nemo sapiente maxime quasi, modi, ipsa esse rem explicabo id eligendi ullam molestiae incidunt quae dicta! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi adipisci voluptate illo. Sit debitis, saepe aspernatur ducimus earum consequuntur. Recusandae in, ad voluptas dicta eveniet explicabo aperiam iusto porro sunt!</descripition>
+        </info>
+        <ul>
+            <li id="point1" onclick="crewSelect(point1)"></li>
+            <li id="point2" onclick="crewSelect(point2)"></li>
+            <li id="point3" onclick="crewSelect(point3)"></li>
+            <li id="point4" onclick="crewSelect(point4)"></li>
+        </ul>
+    </main>
+    <section>
+        <img  id="crewImage" src="" alt="">
+    </section>
+</body>
+<script src="../scrips/crew.js"></script>
+</html>

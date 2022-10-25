@@ -79,7 +79,10 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
+    display:flex;
+    gap:.2vw
 }
+
 
 #navSelected{
     border-bottom: solid rgb(255, 255, 255) 3px;
@@ -95,10 +98,11 @@ nav ul li:hover{
         /*-----MAIN-----*/
 
 main{
+    margin-left: 8vw;
     grid-area: main;
     display:flex;
     flex-direction:column;
-    align-items: center;
+    align-items: start;
     justify-content: end;
     margin-bottom: 150px;
     gap: 25px;
@@ -115,9 +119,11 @@ main h1{
 
 main p{
     color:var(--ligth_pink);
-    width: 23vw;
-    font-size:clamp( 15px,1.3vw, 20px);
-    letter-spacing: 2px;
+    font-size:clamp(15px, 1.3vw, 25px);
+    width: 30vw;
+    line-height: 30px;
+    letter-spacing: .1vw;
+    font-weight: 200;
     animation:fromLeft ease 2s;
 }
 

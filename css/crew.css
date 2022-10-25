@@ -15,7 +15,7 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-image: url(../assets/destination/background-destination-desktop.jpg);
+    background-image: url(../assets/crew/background-crew-desktop.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -38,20 +38,20 @@ nav{
     justify-content: space-between;
     margin: 0px  50px 0px 50px;
 }
-
+        
 nav svg{
     height:4vw;
     min-height:4vw;
     width: 4vw;
     min-width: 4vw;
 }
-
-nav span{
+        
+        nav span{
     height: 4px;
     width: 35vw;
     background: rgba(255, 255, 255, 0.116);
 }
-
+        
 nav ul{
     display:flex;
     flex-direction:row;
@@ -61,48 +61,47 @@ nav ul{
     height: 65px;
     min-width: 400px;
     list-style: none;
-
+        
     font-size:clamp(15px, 1vw, 18px);
     letter-spacing: .15vw;
     gap:1vw;
-
+        
     padding:0px 5vw;
-    background:rgba(255, 255, 255, 0.064);
+    background:rgba(255, 255, 255, 0.051);
     backdrop-filter: blur(10px);
 }
-
+        
 nav ul li{
     padding-bottom:20px;
     transition: ease .3s;
 }
-
+        
 nav ul li a{
     text-decoration: none;
 }
-
+        
 #navSelected{
     border-bottom: solid rgb(255, 255, 255) 3px;
 }
-
-nav ul li:hover{
+        
+ nav ul li:hover{
     border-bottom: solid rgba(255, 255, 255, 0.116) 3px;
 }
 
-        /*END NAV*/
+                /*END NAV*/
 
-
-        /*-----MAIN-----*/
 main{
+    margin-left:100px;
     grid-area: main;
     display:flex;
     flex-direction:column;
-    align-items: center;
+    align-items: start;
     margin-top:3vw;
+    gap:6vw;
 }
 
 main p{
     display:flex;
-    transform: translateX(-4vw);
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: .3vw;
     font-size:1.7vw;
@@ -114,100 +113,79 @@ main p{
 main p number{
     color:var(--ligth_pink);
     font-weight: 600;
-    animation:colorTransparent ease 3s;
+    animation:colorTransparent ease 2s;
 }
 
-main destiny img{
-    margin-top: 3vw;
-    margin-left: 10vw;
-    height: 28vw;
-    width: 28vw;
-    background-size:cover;
-    background-repeat:no-repeat;
-    animation:rotate ease 4s;
-}
-
-        /*END MAIN*/
-
-        /*-----SECTION-----*/
-section{
-    grid-area: section;
+main info {
     display:flex;
-    flex-direction: column;
-    gap:1vw;
-    margin-top:3vw
+    flex-direction:column;
+    gap: 1.2vw;
 }
 
-section ul{
-    margin-top:60px;
-    list-style: none;
-    display:flex;
-    justify-content: start;
-    gap:3vw;
-}
-
-section ul li{
+main info posto{
     color:var(--ligth_pink);
-    cursor: pointer;
-    transition: ease .3s;
-    animation:fromTop ease 1s;
-}
-
-section ul li:hover{
-    border-bottom:solid var(--ligth_pink) 2px;
-}
-
-section h1{
-    color:var(--white);
     font-family: 'Bellefair', serif;
-    font-size: 6vw;
+    font-size:clamp(26px, 1.5vw, 28px);
     font-weight: 400;
+    text-transform: uppercase;
     animation: fromLeft ease 2s;
 }
 
-section descripition{
+main info h1{
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size:clamp(30px, 4vw, 60px);
+    animation: fromLeft ease 1.5s;
+
+}
+
+main info descripition{
     color:var(--ligth_pink);
     font-size:clamp(15px, 1.3vw, 25px);
     width: 30vw;
     line-height: 30px;
     letter-spacing: .1vw;
     font-weight: 200;
-    animation: fromRight ease 1.4s;
-}
-
-section .barrinha_decorativa{
-    background-color:rgba(255, 255, 255, 0.116);
-    height: 4px;
-    width: 40vw;
-    animation:fromRight ease 1.4s;
-}
-
-section .distancia{
-    display: flex;
-    justify-content: start;
-    gap:7vw;
-    width: 30vw;
-}
-
-section .distancia p{
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size:clamp(10px, 1.5vw, 15px);
-    font-weight: 400;
-    
-    color:var(--ligth_pink);
-    animation:fromBottom ease 2s;
-}
-
-section .distancia h3{
-    font-size:clamp(15px, 2vw, 30px);
-    font-weight: 200;
-    animation:fromBottom ease 2s;
+    animation: fromLeft ease 2s;
 
 }
-        /*END SECTION*/
+
+main ul{
+    display:flex;
+    flex-direction: row;
+    gap:1vw;
+    margin-left:20vw;
+    transform: translateY(-50px);
+}
+
+main ul li {
+    list-style: none;
+    height: 15px;
+    width: 15px;
+    border-radius:50%;
+    background-color:rgb(71, 71, 71);
+    animation: backgroundTransparent ease 2s;
+
+}
+
+main ul li:hover{
+    background-color:rgb(119, 119, 119);
+    transition:ease .4s;
+}
 
 
-        /*ANIMATIONS*/
+
+                /*SECTION*/
+section img{
+    height: 80vh;
+    width: auto;
+    animation:fromLeft ease-out 1.5s;
+}
+
+                /*END SECTION*/
+
+            /*ANIMATIONS*/
 
 
 
@@ -273,14 +251,4 @@ section .distancia h3{
     }
 }
 
-@keyframes rotate {
-    from{
-        transform: rotate(-10deg);
-    }
-    to{
-        transform: rotate(0deg);
-    }
-}
-
         /*END ANIMATIONS*/
-
