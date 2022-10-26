@@ -1,6 +1,7 @@
 var technologyImage = document.getElementById("technologyImage")
 var technologyName = document.getElementById("technoName")
 var technoDescripition = document.getElementById("technoDescripition")
+var subTitle = document.getElementById("subTitle")
 var button1 = document.getElementById("button1")
 var button2 = document.getElementById("button2")
 var button3 = document.getElementById("button3")
@@ -27,6 +28,24 @@ function technologySelect(value){
             break
             
     }
+
+    subTitle.style.animation = "none"
+    technologyName.style.animation = "none"
+    technoDescripition.style.animation = "none"
+    technologyImage.style.animation = "none"
+    
+    
+    setTimeout(function(){
+        subTitle.style.animation = ""
+        technologyName.style.animation = ""
+        technoDescripition.style.animation = ""
+        technologyImage.style.animation = ""
+    }, 1)
+
+
+
+
+
 
     lastSelected.style.backgroundColor = ""
     lastSelected.style.color = ""

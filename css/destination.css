@@ -125,6 +125,11 @@ main destiny img{
     background-size:cover;
     background-repeat:no-repeat;
     animation:rotate ease 4s;
+
+}
+main destiny img:hover{
+    scale:1.1;
+    transition:ease 2s;
 }
 
         /*END MAIN*/

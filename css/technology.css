@@ -18,6 +18,7 @@ body{
     background-image: url(../assets/technology/background-technology-desktop.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    overflow:hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 20vh 80vh;
@@ -144,7 +145,18 @@ main div ul li{
     width: 5.2vw;
     height:5.2vw;
     border-radius: 50%; 
-    
+}
+
+main div ul li:nth-child(1){
+    animation:fromLeft ease 1.5s;
+}
+
+main div ul li:nth-child(2){
+    animation:fromLeft ease 2s;
+}
+
+main div ul li:nth-child(3){
+    animation:fromLeft ease 2.5s;
 }
 
 main div ul li:hover{
@@ -166,13 +178,17 @@ main info h3{
     font-size:clamp(26px, 1.5vw, 28px);
     font-weight: 400;
     text-transform: uppercase;
+    animation:fromLeft ease 2s;
+
 }
 
 main info h1{
     text-transform: uppercase;
     font-family: 'Bellefair', serif;
     font-weight: 400;
-    font-size:clamp(30px, 4vw, 60px)
+    font-size:clamp(30px, 4vw, 60px);
+    animation:fromLeft ease 1.5s;
+
 }
 
 
@@ -185,6 +201,8 @@ main info p{
     line-height: 30px;
     letter-spacing: .1vw;
     font-weight: 200;
+    animation:fromLeft ease 2s;
+
 }
 
 main info p::-webkit-scrollbar{
@@ -209,7 +227,89 @@ section{
 section img{
     height: auto;
     width: 30vw;
+    animation: fromLeft ease 1.5s;
+    box-shadow:2vw 2vw 15px rgb(0, 0, 0);
 }
+
+
+
+
+        /*ANIMATIONS*/
+
+
+@keyframes fromLeft {
+    from{
+        transform: translateX(-100px);
+        color:transparent;
+        background-color:transparent
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fromRight {
+    from{
+        transform: translateX(100px);
+        color:transparent
+    }
+
+    to{
+        transform: translateX();
+    }
+}
+
+@keyframes fromTop {
+    from{
+        transform: translateY(-100px);
+        color:transparent
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        transform: translateY(100px);
+        color:transparent
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes backgroundTransparent {
+    from{
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    to{
+    }
+}
+
+@keyframes colorTransparent {
+    from{
+        color: rgba(255, 255, 255, 0);
+    }
+
+    to{
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+        /*END ANIMATIONS*/
 
 
 

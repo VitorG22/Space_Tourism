@@ -18,6 +18,7 @@ body{
     background-image: url(../assets/home/background-home-desktop.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 20vh 80vh;
@@ -114,7 +115,11 @@ main h1{
     font-size: 8vw;
     font-weight: 400;
     animation:fromLeft ease 1.3s;
+}
 
+main h1:hover{
+    scale: 1.1;
+    transition:ease 3s;
 }
 
 main p{
