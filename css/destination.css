@@ -12,6 +12,11 @@
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+
+@media (min-width: 769px) {
+    
+
+
 body{
     height: 100vh;
     width: 100vw;
@@ -210,7 +215,174 @@ section .distancia h3{
 
 }
         /*END SECTION*/
+}
 
+@media (max-width: 768px) {
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:grid;
+    grid-template-rows: 10vh 50vh 40vh ;
+    overflow: hidden;
+}
+
+            /*-----NAV-----*/
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    width: 65vw;
+    padding: 0 5vw;
+    justify-content: space-between;
+    list-style: none;
+    background:rgba(254, 254, 254, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+#navSelected{
+    border-bottom: solid white 2px;
+  }
+
+nav ul li a{
+    display: flex;
+    text-decoration:none;
+    font-size:2.3vw;
+    letter-spacing: .2vw;
+    align-items: center;    
+    height: 10vh;
+    animation:colorTransparent ease 2s;
+}
+
+
+nav svg{
+    height: 48px;
+    width: auto;
+    margin-left:3vw;
+}
+
+
+            /*END NAV*/
+
+        /*-----MAIN-----*/
+
+main{
+    margin-top:50px;
+}
+
+main p {
+    color:white;
+    letter-spacing: .2vw;
+    font-size:20px;
+    margin-left:4vw;
+    font-weight: 200;
+    animation: fromLeft ease 1s;
+}
+
+main p number{
+    color:var(--ligth_pink);
+    font-weight: 600;
+}
+
+main destiny{
+    display:flex;
+    justify-content: center;
+}
+
+main destiny img{
+    height: 35vh;
+}
+
+
+            /*END MAIN*/
+
+            /*-----SECTION-----*/
+
+section{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+section ul{
+    display:flex;
+    list-style: none;
+    gap:5vw;
+    letter-spacing: .2vw;
+    color:var(--ligth_pink);
+    font-weight: 200;
+    font-size:16px;
+}
+section ul li{
+    color:var(--ligth_pink);
+    transition:ease .3s;
+    animation:colorTransparent ease 2s;
+}
+
+section h1{
+    font-size:clamp(80px, 10vw, 100px);
+    font-family: 'Bellefair', serif;
+    font-weight: 200;
+    animation:fromLeft ease 1s
+}
+
+section descripition{
+    color:var(--ligth_pink);
+    width: 70vw;
+    text-align: center;
+    animation:colorTransparent ease 2s;
+}
+
+
+section .barrinha_decorativa{
+    height: 4px;
+    width: 80vw;
+    border-radius:5px;
+    background-color: rgba(255, 255, 255, 0.21);
+    margin: 10px 0px;
+}
+
+section content{
+    display:flex;
+    flex-direction: row;
+    gap :10vw
+}
+
+section content div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+section content div p{
+    color:var(--ligth_pink);
+    font-weight: 200;
+    letter-spacing:.2vw;
+    font-size:14px;
+}
+
+section content div h3{
+    font-size: 25px;
+    font-family: 'Bellefair', serif;
+    font-weight: 200;
+    letter-spacing: .2vw;
+    animation:fromBottom ease 1s;
+}
+
+
+
+} 
 
         /*ANIMATIONS*/
 

@@ -68,9 +68,12 @@ function select_destiny(destiny){
 
     lastDestinySelected.style.borderBottom = ""
     lastDestinySelected.style.transform = ""
+    lastDestinySelected.style.color = ""
+
     var destinySelected = destiny
     destinySelected.style.borderBottom = "solid white 2px"
     destinySelected.style.transform = "translateY(-10px)"
+    destinySelected.style.color = "white"
     lastDestinySelected = destiny
     console.log(destinySelected)
 

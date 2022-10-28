@@ -12,6 +12,9 @@
     font-family:'Barlow Condensed', sans-serif;
 }
 
+@media (min-width: 769px) {
+    
+
 body{
     height: 100vh;
     width: 100vw;
@@ -104,9 +107,9 @@ main{
     display:flex;
     flex-direction:column;
     align-items: start;
-    justify-content: end;
-    margin-bottom: 150px;
+    justify-content: center;
     gap: 25px;
+    
 }
 
 main h1{
@@ -186,9 +189,134 @@ explore a:hover{
     width: 30vw;
     transition: .5s;
 }
+/*END EXPLORE*/
+}
+
+@media (max-width: 768px ) {
 
 
-        /*END EXPLORE*/
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/home/background-home-tablet.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:grid;
+    grid-template-rows: 10vh  55vh 35vh ;
+    overflow: hidden;
+}
+
+            /*-----NAV-----*/
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    width: 65vw;
+    padding: 0 5vw;
+    justify-content: space-between;
+    list-style: none;
+    background:rgba(254, 254, 254, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+#navSelected{
+    border-bottom: solid white 2px;
+  }
+
+nav ul li a{
+    display: flex;
+    text-decoration:none;
+    font-size:2.3vw;
+    letter-spacing: .2vw;
+    align-items: center;    
+    height: 10vh;
+    animation:colorTransparent ease 2s;
+}
+
+
+nav svg{
+    height: 48px;
+    width: auto;
+    margin-left:3vw;
+}
+
+
+            /*END NAV*/
+
+            /*-----MAIN-----*/
+
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main :nth-child(1){
+    color:var(--ligth_pink);
+    text-transform: uppercase;
+    animation:fromLeft ease 3s;
+    font-weight: 200;
+    letter-spacing: .4vw;
+    
+}
+
+main :nth-child(3){
+    display:flex;
+    color:var(--ligth_pink);
+    width: 50vw;
+    line-height: 1.8;
+    letter-spacing: .2vw;
+    text-align: center;
+    animation:fromLeft ease 3s;
+    font-weight: 200;
+}
+
+main h1{
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size:clamp(100px, 17vw, 200px);
+    animation:fromLeft ease 1.5s;
+}
+
+                /*END MAIN*/
+
+            /*-----EXPLORE-----*/
+
+explore{
+    display:flex;
+    align-items: top;
+    justify-content: center;
+}
+
+explore a{
+    display:flex;
+    text-decoration: none;
+    font-family: 'Bellefair', serif;
+    background:var(--white);
+    color:black;
+    height: 20vh;
+    width: 20vh;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation:fromBottom ease 2s;
+}
+
+
+
+
+
+
+}
 
 
         /*ANIMATIONS*/
