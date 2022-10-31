@@ -12,6 +12,9 @@
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+@media (min-width: 769px) {
+    
+
 body{
     height: 100vh;
     width: 100vw;
@@ -184,7 +187,165 @@ section img{
 }
 
                 /*END SECTION*/
+}
 
+@media (max-width:768px) {
+    
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:grid;
+    grid-template-rows: 10vh  40vh 50vh ;
+    overflow: hidden;
+}
+
+            /*-----NAV-----*/
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    width: 65vw;
+    padding: 0 5vw;
+    justify-content: space-between;
+    list-style: none;
+    background:rgba(254, 254, 254, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+#navSelected{
+    border-bottom: solid white 2px;
+  }
+
+nav ul li a{
+    display: flex;
+    text-decoration:none;
+    font-size:2.3vw;
+    letter-spacing: .2vw;
+    align-items: center;    
+    height: 10vh;
+    animation:colorTransparent ease 2s;
+}
+
+
+nav svg{
+    height: 48px;
+    width: auto;
+    margin-left:3vw;
+}
+
+
+            /*END NAV*/
+}
+
+            /*-----MAIN-----*/
+main {
+    display:flex;
+    flex-direction:column;
+    margin-top: 5vh
+}
+
+main p {
+    color: white;
+    font-size:clamp(15px, 3vw, 20px);
+    font-weight: 200;
+    letter-spacing: .2vw;
+    margin-left:4vw;
+    animation:fromLeft ease 1s;
+}
+
+main p number{
+    color:var(--ligth_pink);
+    font-weight: 600;
+}
+
+main info{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+main posto{
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: .2vw;
+    font-size:clamp(20px, 3.5vw, 30px);
+    font-family: 'Bellefair', serif;
+    color:var(--ligth_pink);
+    animation:fromLeft ease 2s;
+
+}
+
+main h1{
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    letter-spacing: .2vw;
+    font-size: clamp(30px, 5.5vw, 40px);
+    margin-top:15px;
+    animation:fromLeft ease 1.5s;
+
+}
+
+main descripition{
+    text-align: center;
+    letter-spacing: .2vw;
+    color:var(--ligth_pink);
+    width: 80vw;
+    max-height: 80px;
+    font-size:16px;
+    line-height: 20px;
+    font-weight: 200;
+    margin-top:20px;
+    animation:fromLeft ease 1s;
+}
+
+
+main ul {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    gap: 5vw;
+    list-style: none;
+    margin-top:15px;
+}
+
+main ul li{
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    transition:ease .5s;
+    animation:backgroundTransparent ease 1s;
+}
+
+
+            
+            /*END MAIN*/
+
+section{
+    display:flex;
+    justify-content: center;
+}
+section img{
+    animation:fromLeft ease 1.5s;
+}
+            /*----SECTION-----*/
+            
+            
+            
+            
+            /*END SECTION*/
             /*ANIMATIONS*/
 
 

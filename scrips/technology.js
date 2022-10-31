@@ -43,10 +43,6 @@ function technologySelect(value){
     }, 1)
 
 
-
-
-
-
     lastSelected.style.backgroundColor = ""
     lastSelected.style.color = ""
     value.style.backgroundColor = "white"
