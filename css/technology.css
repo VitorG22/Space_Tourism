@@ -12,6 +12,12 @@
     font-family:'Barlow Condensed', sans-serif;
 }
 
+@media (min-width: 769px) {
+    
+.mainTablet{
+    display:none
+}
+
 body{
     height: 100vh;
     width: 100vw;
@@ -28,6 +34,9 @@ body{
 }
 
 
+#technologyImageMobile{
+    display:none
+}
         /*-----NAV-----*/
 
 nav{
@@ -232,8 +241,193 @@ section img{
 }
 
 
+}
+
+@media (max-width: 768px) {
+ 
+.mainDesktop{
+    display:none;
+}
+
+section{
+    display:none;
+}
 
 
+    body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:grid;
+    grid-template-rows: 10vh 90vh ;
+    overflow: hidden;
+    grid-template-areas: 
+    "nav"
+    "title"
+    "image"
+    "info"
+    ;
+}
+
+#technologyImageDesktop{
+    display:none
+}
+
+
+
+               /*-----NAV-----*/
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: nav;
+
+}
+
+nav ul{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    width: 65vw;
+    padding: 0 5vw;
+    justify-content: space-between;
+    list-style: none;
+    background:rgba(254, 254, 254, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+#navSelected{
+    border-bottom: solid white 2px;
+  }
+
+nav ul li a{
+    display: flex;
+    text-decoration:none;
+    font-size:2.3vw;
+    letter-spacing: .2vw;
+    align-items: center;    
+    height: 10vh;
+    animation:colorTransparent ease 2s;
+}
+
+
+nav svg{
+    height: 48px;
+    width: auto;
+    margin-left:3vw;
+}
+
+
+            /*END NAV*/
+
+main h4 {
+    color: white;
+    font-size:clamp(15px, 3vw, 20px);
+    font-weight: 200;
+    letter-spacing: .2vw;
+    margin-left:4vw;
+    animation:fromLeft ease 1s;
+    text-transform: uppercase;
+}
+
+
+main h4 number{
+    color:var(--ligth_pink);
+    font-weight: 600;
+}
+
+main img{
+    margin-top:30px;
+    width: 100vw;
+    animation:fromLeft ease 1s;
+}
+
+main .containerDeGrid{
+    display:flex;
+    flex-direction:column;
+    margin-top:20px;
+}
+
+main .containerDeGrid ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap:3vw;
+}
+
+main .containerDeGrid ul li{
+    border:solid 2px rgb(52, 51, 51);
+    color:white;
+    font-size:4vw;
+    font-family: 'Bellefair', serif;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 8vw;
+    width: 8vw;
+    animation: fromLeft ease 2.5s;
+    z-index: 0;
+}
+
+main .containerDeGrid ul li:hover{
+    background-color:white;
+    border-color:none;
+    color:black;
+}
+
+
+.containerDeGrid info{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top:20px;
+    gap: 10px;
+}
+
+.containerDeGrid info h3{
+    color:var(--ligth_pink);
+    font-family: 'Bellefair', serif;
+    font-weight: 200;
+    letter-spacing: .2vw;
+    animation:fromLeft ease 2s;
+}
+
+.containerDeGrid info h1{
+    font-family: 'Bellefair', serif;
+    font-weight: 200;
+    letter-spacing: .2vw;
+    animation:fromLeft ease 1.5s;
+}
+
+.containerDeGrid info p{
+    text-align: center;
+    width: 80vw;
+    max-height: 100px;
+    overflow-y:scroll;
+    line-height: 25px;
+    letter-spacing: .2vw;
+    font-weight: 200;
+    font-size:16px;
+    animation:fromLeft ease 1s;
+}
+.containerDeGrid info p::-webkit-scrollbar{
+    width:3px;
+}
+.containerDeGrid info p::-webkit-scrollbar-track {
+    background: rgb(71, 71, 71) ;
+}
+.containerDeGrid info p::-webkit-scrollbar-thumb {
+    background: var(--ligth_pink); 
+  }
+
+            /*END  MAIN*/
+
+
+}
         /*ANIMATIONS*/
 
 

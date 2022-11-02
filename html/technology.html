@@ -23,12 +23,12 @@
             <li id="navSelected"><a href="technology.html">TECHNOLOGY</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="mainDesktop">
         <h4>
             <number>03</number>
             space launch 101
         </h4>
-        <div>
+        <div class="containerDeGrid">
             <ul>
                 <li id="button1" onclick="technologySelect(button1)">1</li>
                 <li id="button2" onclick="technologySelect(button2)">2</li>
@@ -41,8 +41,32 @@
             </info>
         </div>
     </main>
+
+
+    <main class="mainTablet">
+        <h4>
+            <number>03</number>
+            space launch 101
+        </h4>
+        <img id="technologyImageMobile" src="">
+        <div class="containerDeGrid">
+            <ul>
+                <li  onclick="technologySelect(button1)">1</li>
+                <li  onclick="technologySelect(button2)">2</li>
+                <li  onclick="technologySelect(button3)">3</li>
+            </ul>
+            <info>
+                <h3 id="subTitle">THE TERMINOLOGY...</h3>
+                <h1 id="technoNameMobile"></h1>
+                <p  id="technoDescripitionMobile"></p>
+            </info>
+        </div>
+
+    </main>
+
+
     <section>
-        <img id="technologyImage" src="">
+        <img id="technologyImageDesktop" src="">
     </section>
 </body>
 <script src="../scrips/technology.js"></script>

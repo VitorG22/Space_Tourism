@@ -354,8 +354,6 @@ section{
 }
 section img{
     animation:fromLeft ease 1.5s;
-    z-index: -1;
-    
 }
             /*----SECTION-----*/
             
