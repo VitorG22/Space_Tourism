@@ -5,9 +5,9 @@ var technologyNameMobile = document.getElementById("technoNameMobile")
 var technoDescripition = document.getElementById("technoDescripition")
 var technoDescripitionMobile = document.getElementById("technoDescripitionMobile")
 var subTitle = document.getElementById("subTitle")
-var button1 = document.getElementById("button1")
-var button2 = document.getElementById("button2")
-var button3 = document.getElementById("button3")
+var button1 = document.querySelectorAll("#button1")
+var button2 = document.querySelectorAll("#button2")
+var button3 = document.querySelectorAll("#button3")
 var lastSelected = button1
 
 function technologySelect(value){
@@ -60,13 +60,18 @@ function technologySelect(value){
         technologyImageMobile.style.animation = ""
     }, 1)
 
-
-    lastSelected.style.backgroundColor = ""
-    lastSelected.style.color = ""
-    value.style.backgroundColor = "white"
-    value.style.color = "black"
+    console.log(value)
+    lastSelected[0].style.backgroundColor = ""
+    lastSelected[1].style.backgroundColor = ""
+    lastSelected[0].style.color = ""
+    lastSelected[1].style.color = ""
+    value[0].style.backgroundColor = "white"
+    value[1].style.backgroundColor = "white"
+    value[0].style.color = "black"
+    value[1].style.color = "black"
 
     lastSelected = value
+    console.log(value)
 }
 
 

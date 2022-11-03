@@ -371,13 +371,11 @@ main .containerDeGrid ul li{
     width: 8vw;
     animation: fromLeft ease 2.5s;
     z-index: 0;
+    transition:.3s;
+
 }
 
-main .containerDeGrid ul li:hover{
-    background-color:white;
-    border-color:none;
-    color:black;
-}
+
 
 
 .containerDeGrid info{

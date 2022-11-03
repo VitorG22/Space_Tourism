@@ -350,13 +350,13 @@ section .barrinha_decorativa{
     width: 80vw;
     border-radius:5px;
     background-color: rgba(255, 255, 255, 0.21);
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 
 section content{
     display:flex;
     flex-direction: row;
-    gap :10vw
+    gap :10vw;
 }
 
 section content div{
