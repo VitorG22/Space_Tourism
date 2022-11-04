@@ -12,8 +12,10 @@
     font-family:'Barlow Condensed', sans-serif;
 }
 
-@media (min-width: 769px) {
-    
+@media (min-width: 768px) {
+
+#burger{display:none;}
+#closed{display:none;}
 
 body{
     height: 100vh;
@@ -88,7 +90,7 @@ nav ul li a{
 }
 
 
-#navSelected{
+.navSelected{
     border-bottom: solid rgb(255, 255, 255) 3px;
 }
 
@@ -192,8 +194,11 @@ explore a:hover{
 /*END EXPLORE*/
 }
 
-@media (max-width: 768px ) {
+@media (min-width: 376px) and (max-width: 768px ) {
 
+    
+#burger{display:none;}
+#closed{display:none;}
 
 body{
     height: 100vh;
@@ -226,7 +231,7 @@ nav ul{
     backdrop-filter: blur(10px);
 }
 
-#navSelected{
+.navSelected{
     border-bottom: solid white 2px;
   }
 
@@ -317,6 +322,128 @@ explore a{
 
 
 }
+
+@media (max-width: 376px){
+
+#closed{display:none;}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url(/assets/home/background-home-mobile.jpg);
+    background-size:cover;
+}
+
+            /*-----NAV-----*/
+
+nav{
+    display:flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin: 24px;
+}
+
+nav svg{
+    height: 24px;
+    width: 24px;
+}
+
+
+nav #burger, nav #closed{
+    transform: translateY(25%);
+}
+
+nav ul {
+    position: absolute;    
+    right:0%;
+    top:0%;
+    list-style-type: none;
+    height: 100vh;
+    width: 0vw;
+
+    display:flex;
+    flex-direction:column;
+    padding-top:20vh;    
+    gap:5vh;
+
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.07);    
+
+    transition: ease 1s;
+}
+
+nav ul li a{
+    text-decoration:none;
+    margin-left:15%;
+    letter-spacing: 1vw;
+    font-size:16px;
+    font-weight: 200;
+}
+
+.navSelected a{
+    border-bottom: solid white 2px;
+}
+
+            /*END NAV*/
+
+            /*-----MAIN-----*/
+
+main{
+    height: 50vh;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin:24px;
+}
+
+main p{
+    color:var(--ligth_pink);
+    text-align: center;
+    letter-spacing: .2vw;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+main h1{
+    font-size:80px;
+    font-family: "bellefair";
+    font-weight: 400;
+    letter-spacing: .2vw;
+    margin:25px 0;
+}
+
+        /*END MAIN*/
+
+explore{
+    display:flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+explore a{
+    text-decoration: none;
+    font-size:clamp(15px, 5.5vw, 20px);
+    font-family: "bellefair";
+    font-weight: 400;
+    letter-spacing: .4vw;
+    color:black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background:white;
+    height: clamp(120px, 40vw, 150px);
+    width: clamp(120px, 40vw, 150px);
+    border-radius: 50%;
+}
+
+
+
+
+}
+
 
 
         /*ANIMATIONS*/

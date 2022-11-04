@@ -14,7 +14,9 @@
 
 
 @media (min-width: 769px) {
-    
+
+#burger{display:none;}
+#closed{display:none;}
 
 
 body{
@@ -217,8 +219,10 @@ section .distancia h3{
         /*END SECTION*/
 }
 
-@media (max-width: 768px) {
+@media (min-width: 376px) and (max-width: 768px) {
 
+#burger{display:none;}
+#closed{display:none;}
 
 body{
     height: 100vh;
@@ -384,6 +388,181 @@ section content div h3{
 
 } 
 
+@media (max-width: 376px){
+
+#closed{display:none;}
+ 
+
+body{
+    height: 100%;
+    width: 100vw;
+    overflow-x:hidden;
+    background-image: url(/assets/destination/background-destination-mobile.jpg);
+    background-size:cover;
+    padding-bottom:50px
+}
+
+                /*-----NAV-----*/
+
+nav{
+    display:flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin: 24px;
+}
+
+nav svg{
+    height: 24px;
+    width: 24px;
+}
+
+
+nav #burger, nav #closed{
+    transform: translateY(25%);
+    z-index: 3;
+    right: 6%;
+    top:3%
+}
+
+nav #closed{
+    position:fixed;
+}
+
+nav ul {
+    position: fixed;    
+    right:0%;
+    top:0%;
+    list-style-type: none;
+    height: 100vh;
+    width: 0vw;
+
+    display:flex;
+    flex-direction:column;
+    padding-top:20vh;    
+    gap:5vh;
+
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.07);    
+
+    transition: ease 1s;
+    z-index:2
+
+}
+
+nav ul li a{
+    text-decoration:none;
+    margin-left:15%;
+    letter-spacing: 1vw;
+    font-size:16px;
+    font-weight: 200;
+}
+
+.navSelected a{
+    border-bottom: solid white 2px;
+}
+
+            /*END NAV*/
+
+main{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    align-items: center;
+}
+
+main p {
+    font-size:16px;
+    letter-spacing: 4px;
+}
+
+main p number{
+    color:var(--ligth_pink);
+}
+
+main destiny img{
+    width:50vw;
+}
+
+            /*END MAIN*/
+
+        /*-----SECTION-----*/
+
+
+section{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:20px;
+    margin-top:20px;
+}
+
+section ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:10vw;
+}
+
+section ul li{
+    color:var(--ligth_pink)
+}
+
+section h1{
+    font-size:56px;
+    font-family: 'bellefair';
+    font-weight: 400;
+
+    display:flex;
+    justify-content:center;
+}
+            
+section descripition{
+    color:var(--ligth_pink);
+    display:flex;
+    width: 80vw;
+
+    text-align: center;
+    font-size:16px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+section .barrinha_decorativa{
+    background-color:rgba(255, 255, 255, 0.21);
+    height: 2px;
+    width:80vw
+}
+
+section .distancia{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+.distancia div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+
+.distancia div p{
+    color:var(--ligth_pink);
+    font-size:15px;
+    letter-spacing: 2px;
+}
+
+.distancia div h3{
+    font-size:28px;
+    font-family: 'bellefair';
+    font-weight: 400;
+    margin-top:8px;
+    letter-spacing: 2px;
+}
+
+}
         /*ANIMATIONS*/
 
 

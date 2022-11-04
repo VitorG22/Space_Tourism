@@ -13,27 +13,29 @@
  
     <title>Space Tourism</title>
 </head>
-<body>
+<body> 
     <nav>
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/></svg>    
         <span class="barrinha_decorativa"></span>
-        <ul>
-            <li id="navSelected"><a href="index.html">HOME</a></li>
-            <li><a href="html/destination.html">DESTINATION</a></li>
-            <li><a href="html/crew.html">CREW</a></li>
-            <li><a href="html/technology.html">TECHNOLOGY</a></li>
+        <ul id="navBar">
+            <li class="navSelected"><a id="opition" href="index.html">HOME</a></li>
+            <li><a id="opition" href="html/destination.html">DESTINATION</a></li>
+            <li><a id="opition" href="html/crew.html">CREW</a></li>
+            <li><a id="opition" href="html/technology.html">TECHNOLOGY</a></li>
         </ul>
+        <svg id="burger" onclick="burgerOpen('Open')" xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+        <svg id="closed" onclick="burgerOpen('Close')" xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>
     </nav>
     <main>
-        <p>So, you want to travel to</p>
+        <p>SO, YOU WANT TO TRAVEL TO</p>
         <h1>SPACE</h1>
         <p> Let’s face it; if you want to go to space, you might as well genuinely go to 
             outer space and not hover kind of on the edge of it. Well sit back, and relax 
             because we’ll give you a truly out of this world experience!</p>
     </main>
     <explore>
-        <a href="html/destination.html">EXPLORE</a>
+        <a href="html/destination.html" translate="no">EXPLORE</a>
     </explore>    
 </body>
-<script src="../landing.js"></script>
+<script src="./scrips/burger.js"></script>
 </html>
